@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Getting Started
 
-Put all the firebase config into .env.local file and with the names from firebase. If required check (youtube video)[https://www.youtube.com/watch?v=PKwu15ldZ7k]
+Put all the firebase config into .env.local file and with the names from firebase. If required check [youtube video](https://www.youtube.com/watch?v=PKwu15ldZ7k)
 
 ## Available Scripts
 
