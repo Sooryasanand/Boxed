@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Getting Started
+
+Put all the firebase config into .env.local file and with the names from firebase. If required check (youtube video)[https://www.youtube.com/watch?v=PKwu15ldZ7k]
+
 ## Available Scripts
 
 In the project directory, you can run:
