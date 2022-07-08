@@ -7,7 +7,7 @@ import Login from "./authentication/Login";
 import PrivateRoute from "./authentication/PrivateRoute";
 import ForgotPassword from "./authentication/ForgotPassword";
 import UpdateProfile from "./authentication/UpdateProfile";
-import Dashboard from "./Boxer/Dashboard";
+import Dashboard from "./Boxed/Dashboard";
 
 function App() {
   return (
