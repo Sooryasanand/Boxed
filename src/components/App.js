@@ -1,33 +1,62 @@
 import React from "react";
-import Signup from "./Signup";
-import { Container } from "react-bootstrap";
+import Signup from "./authentication/Signup";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Login from "./Login";
-import ForgotPassword from "./ForgotPassword";
-import UpdateProfile from "./UpdateProfile";
+import Profile from "./authentication/Profile";
+import Login from "./authentication/Login";
+import PrivateRoute from "./authentication/PrivateRoute";
+import ForgotPassword from "./authentication/ForgotPassword";
+import UpdateProfile from "./authentication/UpdateProfile";
+import Dashboard from "./Boxer/Dashboard";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
-        <Router>
-          <AuthProvider>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/update-profile" element={<UpdateProfile />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
-            </Routes>
-          </AuthProvider>
-        </Router>
-      </div>
-    </Container>
+    <Router>
+      <AuthProvider>
+        <Routes>
+          {/* Boxer */}
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          ></Route>
+          <Route
+            path="/folder/:folderId"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          ></Route>
+
+          {/* Profile */}
+          <Route
+            path="/user"
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            }
+          ></Route>
+          <Route
+            path="/update-profile"
+            element={
+              <PrivateRoute>
+                <UpdateProfile />
+              </PrivateRoute>
+            }
+          ></Route>
+
+          {/* Auth */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Routes>
+      </AuthProvider>
+    </Router>
   );
 }
 

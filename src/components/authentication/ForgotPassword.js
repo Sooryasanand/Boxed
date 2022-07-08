@@ -1,37 +1,52 @@
 import React, { useRef, useState } from "react";
 import { Card, Form, Button, Alert } from "react-bootstrap";
-import { useAuth } from "../contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
+import CenteredContainer from "./CenteredContainer";
 
-function Login() {
+function ForgotPassword() {
+  {
+    /* Values to save like email and push to firebase*/
+  }
   const emailRef = useRef();
-  const passwordRef = useRef();
-  const { login } = useAuth();
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const { resetPassword } = useAuth();
 
+  {
+    /* Values for error, messages and for loading*/
+  }
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  {
+    /* Submit Function for Reset Password */
+  }
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
+      setMessage("");
       setError("");
       setLoading(true);
-      await login(emailRef.current.value, passwordRef.current.value);
-      navigate("/");
+      await resetPassword(emailRef.current.value);
+      setMessage("Check your email for a link to reset your password.");
     } catch {
-      setError(error.message);
+      setError("Failed to reset password");
     }
 
     setLoading(false);
   }
 
+  {
+    /* The UI of the application */
+  }
   return (
-    <>
+    <CenteredContainer>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h2 className="text-center mb-4">Password Reset</h2>
           {error && <Alert variant="danger">{error}</Alert>}
+          {message && <Alert variant="success">{message}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email" className="mb-2 mt-2">
               <Form.Label>Email</Form.Label>
@@ -42,29 +57,20 @@ function Login() {
                 required
               />
             </Form.Group>
-            <Form.Group id="password" className="mb-4 mt-2">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="Password"
-                placeholder="Password"
-                ref={passwordRef}
-                required
-              />
-            </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Log In
+              Reset Password
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password</Link>
+            <Link to="/login">Login</Link>
           </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </CenteredContainer>
   );
 }
 
-export default Login;
+export default ForgotPassword;
