@@ -4,7 +4,7 @@ Boxed is an cloud storage app which is build using various Api's and apps. The f
 ## How to run it?
 This website can be viewed from [here](https://boxer-development.web.app/)
 
-## Key featuers of the website
+## Key features of the website
 - Authentication of user and only allowing to access logedin user's files and folders. 
 - Not allowing other users to browse other users files and folders without auth.
 - Getting images, files and folders from Google Firebase and displaying them to the website.
