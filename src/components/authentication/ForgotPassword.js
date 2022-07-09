@@ -5,22 +5,16 @@ import { Link } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
 
 function ForgotPassword() {
-  {
-    /* Values to save like email and push to firebase*/
-  }
+  /* Values to save like email and push to firebase*/
   const emailRef = useRef();
   const { resetPassword } = useAuth();
 
-  {
-    /* Values for error, messages and for loading*/
-  }
+  /* Values for error, messages and for loading*/
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  {
-    /* Submit Function for Reset Password */
-  }
+  /* Submit Function for Reset Password */
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -37,9 +31,7 @@ function ForgotPassword() {
     setLoading(false);
   }
 
-  {
-    /* The UI of the application */
-  }
+  /* The UI of the application */
   return (
     <CenteredContainer>
       <Card>

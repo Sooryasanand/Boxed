@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +6,6 @@ import { Button } from "react-bootstrap";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import firebase from "firebase/compat/app";
-import { database } from "../../firebase";
 
 export default function Folder({ folder }) {
   const docRef = firebase.firestore().collection("folders");
@@ -34,7 +33,6 @@ export default function Folder({ folder }) {
         },
         {
           label: "No",
-          onClick: () => alert("Click No"),
         },
       ],
       closeOnEscape: true,

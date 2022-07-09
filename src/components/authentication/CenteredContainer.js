@@ -1,10 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 
-{
-  /* For centering all the Auth Components */
-}
-
+/* For centering all the Auth Components */
 export default function CenteredContainer({ children }) {
   return (
     <Container

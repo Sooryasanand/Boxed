@@ -5,26 +5,19 @@ import { Link, useNavigate } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
 
 function Login() {
-  {
-    /* Values to save like email and Passwords and push them to firebase*/
-  }
+  /* Values to save like email and Passwords and push them to firebase*/
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login } = useAuth();
 
-  {
-    /* Values for error, messages and for loading*/
-  }
+  /* Values for error, messages and for loading*/
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  {
-    /* Used for Navigation between pages */
-  }
+
+  /* Used for Navigation between pages */
   const navigate = useNavigate();
 
-  {
-    /* handling the submit function to login */
-  }
+  /* handling the submit function to login */
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -40,9 +33,7 @@ function Login() {
     setLoading(false);
   }
 
-  {
-    /* The UI of the application */
-  }
+  /* The UI of the application */
   return (
     <CenteredContainer>
       <h3 className="text-center mb-5">Welcome back to Boxed</h3>

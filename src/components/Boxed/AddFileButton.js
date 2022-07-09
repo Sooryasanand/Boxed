@@ -30,7 +30,7 @@ export default function AddFileButton({ currentFolder }) {
     ]);
 
     const filePath =
-      currentFolder == ROOT_FOLDER
+      currentFolder === ROOT_FOLDER
         ? `${currentFolder.path.join("/")}/${file.name}`
         : `${currentFolder.path.join("/")}/${currentFolder.name}/${file.name}`;
 

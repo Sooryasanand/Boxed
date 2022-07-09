@@ -25,7 +25,7 @@ export default function AddFolderButton({ currentFolder }) {
     if (currentFolder == null) return;
 
     const path = [...currentFolder.path];
-    if (currentFolder != ROOT_FOLDER) {
+    if (currentFolder !== ROOT_FOLDER) {
       path.push({ name: currentFolder.name, id: currentFolder.id });
     }
 

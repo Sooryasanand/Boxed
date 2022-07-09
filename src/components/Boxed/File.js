@@ -36,7 +36,6 @@ export default function File({ file }) {
         },
         {
           label: "No",
-          onClick: () => alert("Click No"),
         },
       ],
       closeOnEscape: true,
@@ -48,6 +47,7 @@ export default function File({ file }) {
     <a
       href={file.url}
       target="_blank"
+      rel="noopener noreferrer"
       className="btn btn-outline-dark text-truncate w-100"
       onContextMenu={Delete}
     >
