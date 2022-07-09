@@ -18,19 +18,28 @@ This website can be viewed from [here](https://boxer-development.web.app/)
 
 ## Screenshot 
 #### Login Screen
-<img src="https://github.com/Sooryasanand/Indian-Streaming-Service/blob/main/Screenshot/Screen%20Shot%202022-03-07%20at%2011.52.04%20am.png" width="500" height="300">
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/login_screen.png" width="500" height="300">
+
+#### SignUp Screen
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/signup_screen.png" width="500" height="300">
 
 #### Home Screen
-<img src="https://github.com/Sooryasanand/Indian-Streaming-Service/blob/main/Screenshot/Screen%20Shot%202022-03-07%20at%2011.52.12%20am.png" width="500" height="300">
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/dashboard_screen.png" width="500" height="300">
+
+#### Home Screen 2
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen.png" width="500" height="300">
+
+#### Home Screen 3
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen2.png" width="500" height="300">
 
 #### Profile Screen
-<img src="https://github.com/Sooryasanand/Indian-Streaming-Service/blob/main/Screenshot/Screen%20Shot%202022-03-07%20at%2011.52.21%20am.png" width="500" height="300">
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/profile_screen.png" width="500" height="300">
 
-#### Movie Info Screen
-<img src="https://github.com/Sooryasanand/Indian-Streaming-Service/blob/main/Screenshot/Screen%20Shot%202022-03-07%20at%2011.52.27%20am.png" width="500" height="300">
+#### Delete File and Folder Screen
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/deleteFile_screen.png" width="500" height="300">
 
-#### Movie Player Screen
-<img src="https://github.com/Sooryasanand/Indian-Streaming-Service/blob/main/Screenshot/Screen%20Shot%202022-03-07%20at%2011.52.39%20am.png" width="500" height="300">
+#### Update Profile Screen
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/updateProfile_screen.png" width="500" height="300">
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit)
