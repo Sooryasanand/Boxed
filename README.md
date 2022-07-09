@@ -27,7 +27,7 @@ This website can be viewed from [here](https://boxer-development.web.app/)
 <img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/dashboard_screen.png" width="500" height="300">
 
 #### Home Screen 2
-<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen.png" width="500" height="300">
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen1.png" width="500" height="300">
 
 #### Home Screen 3
 <img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen2.png" width="500" height="300">
