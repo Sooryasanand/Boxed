@@ -3,6 +3,8 @@ import { Card, Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
+import { authentication } from "../../firebase";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 function Signup() {
   /* Values to save like email and Passwords and Password Confirmation and push them to firebase*/
@@ -37,6 +39,18 @@ function Signup() {
 
     setLoading(false);
   }
+
+  /* handling function to login with google */
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(authentication, provider)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   /* The UI of the application */
   return (
@@ -77,7 +91,36 @@ function Signup() {
             <Button disabled={loading} className="w-100" type="submit">
               Sign Up
             </Button>
+            <Form.Label
+              className="mb-3 mt-3"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "25px",
+              }}
+            >
+              or
+            </Form.Label>
           </Form>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onClick={signInWithGoogle}
+          >
+            <img
+              src={require("../../logo/google_logo.png")}
+              style={{
+                width: "40px",
+                height: "40px",
+                cursor: "pointer",
+              }}
+              alt="Logo"
+            />
+          </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">

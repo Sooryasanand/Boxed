@@ -3,6 +3,11 @@ import { Card, Form, Button, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
+import { authentication } from "../../firebase";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 
 function Login() {
   /* Values to save like email and Passwords and push them to firebase*/
@@ -32,6 +37,18 @@ function Login() {
 
     setLoading(false);
   }
+
+  /* handling function to login with google */
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(authentication, provider)
+      .then((re) => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   /* The UI of the application */
   return (
@@ -63,7 +80,36 @@ function Login() {
             <Button disabled={loading} className="w-100" type="submit">
               Log In
             </Button>
+            <Form.Label
+              className="mb-3 mt-3"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "25px",
+              }}
+            >
+              or
+            </Form.Label>
           </Form>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onClick={signInWithGoogle}
+          >
+            <img
+              src={require("../../logo/google_logo.png")}
+              style={{
+                width: "40px",
+                height: "40px",
+                cursor: "pointer",
+              }}
+              alt="Logo"
+            />
+          </div>
           <div className="w-100 text-center mt-3">
             <Link to="/forgot-password">Forgot Password</Link>
           </div>
