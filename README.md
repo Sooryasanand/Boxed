@@ -1,24 +1,20 @@
 # Stream Flex
-Boxed is an cloud storage app which is build using various Api's and apps. The files and folders of the user, the images in the website and other information is stored in Firebase. Firebase hosting was used to host the website in the internet. Google Firebase was used for authentication, storage and database to keep track of the user's info and their files and folders. I used bootstrap for the UI and the css. 
+Boxed is an cloud storage app which is build using various Api's and apps. The files and folders of the user, the images in the website and other information is stored in Google Firebase. Google Firebase hosting was used to host the website in the internet. Google Firebase was used for authentication, storage and database to keep track of the user's info and their files and folders.
 
 ## How to run it?
-This website cannot be run because I have removed Aws, Heroku, Firebase and stripe api keys from the application before submiting it to github for confidentiality reasons. 
+This website can be viewed from [here](https://boxer-development.web.app/)
 
 ## Key featuers of the website
-- Authentication of user based on their subscription. 
-- Not allowing users to browse movies without subscription.
-- Getting images and movies from Aws amplify and Displaying them to the website.
-- Changing screens depending on the movie the user have selected to watch.
-- Not allowing to download or right click while watching the movie.
-- Having a user page where all the relvent user information is stored and their subscriptions.
-- Lets the user know what is their current subscription.
-- Alows the user to cancel and update their subscription and their info after clicking on the current subscription.
+- Authentication of user and only allowing to access logedin user's files and folders. 
+- Not allowing other users to browse other users files and folders without auth.
+- Getting images, files and folders from Google Firebase and displaying them to the website.
+- Changing screens depending on the folder they have selected.
+- Having a user page where all the relvent user information is stored and can update them.
+- Allows the user to cancel and update their info if loged in.
+- Allows user to change their password if they forgot about it.
 
 ## Softwares and Apps used for the website
-- Amazon Web Services - S3, Lambda, MediaConvert. Used for Storing Images, Movies and other misc.
-- Heroku - Used for hosting the Website.
-- Google Firebase - Used for Auth, store user information and store their payment details.
-- Stripe - Used for payments and to update user info.
+- Google Firebase - Authentication of users. Storage inorder to store the users files. Firestore Database to save the user's information and their files and folders information. Hosting used for hosting the Website
 
 ## Screenshot 
 #### Login Screen
