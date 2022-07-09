@@ -32,6 +32,9 @@ This website can be viewed from [here](https://boxer-development.web.app/)
 #### Home Screen 3
 <img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/folderInside_screen2.png" width="500" height="300">
 
+#### Home Screen 4
+<img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/uploadProgress_screen.png" width="500" height="300">
+
 #### Profile Screen
 <img src="https://github.com/Sooryasanand/Boxed/blob/main/public/screenshots/profile_screen.png" width="500" height="300">
 
