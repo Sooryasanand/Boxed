@@ -15,7 +15,7 @@ function App() {
     <Router>
       <AuthProvider>
         <Routes>
-          /* Navigation for the inside of the application */
+          {/* Navigation for the inside of the application */}
           <Route
             path="/"
             element={
@@ -32,7 +32,7 @@ function App() {
               </PrivateRoute>
             }
           ></Route>
-          /* Profile */
+          {/* Profile */}
           <Route
             path="/user"
             element={
@@ -49,7 +49,7 @@ function App() {
               </PrivateRoute>
             }
           ></Route>
-          /* Navigation for the Auth */
+          {/* Navigation for the Auth */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
