@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { ROOT_FOLDER } from "../../hooks/useFolder";
 
 export default function FolderBreadCrumbs({ currentFolder }) {
+  /* Values saved to be used in the app like the path */
   let path = currentFolder === ROOT_FOLDER ? [] : [ROOT_FOLDER];
   if (currentFolder) path = [...path, ...currentFolder.path];
+
+  /* Rendering the breadcrumbs of the application */
   return (
     <Breadcrumb
       className="flex-grow-1"

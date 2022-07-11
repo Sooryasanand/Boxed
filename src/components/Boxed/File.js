@@ -6,12 +6,15 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import firebase from "firebase/compat/app";
 import { getStorage, ref, deleteObject } from "firebase/storage";
 
+/* Calling the storage from the Firebase */
 const storage = getStorage();
 
 export default function File({ file }) {
+  /* Values of the database and storage*/
   const docRef = firebase.firestore().collection("files");
   const storageRef = ref(storage, `${file.url}`);
 
+  /* Handling the delete function of the files */
   const handleDelete = () => {
     try {
       console.log(`${file.id}`);
@@ -43,6 +46,7 @@ export default function File({ file }) {
     });
   };
 
+  /* Rendering a single file */
   return (
     <a
       href={file.url}

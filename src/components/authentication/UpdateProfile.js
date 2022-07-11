@@ -5,14 +5,20 @@ import { Link, useNavigate } from "react-router-dom";
 import CenteredContainer from "./CenteredContainer";
 
 function UpdateProfile() {
+  /* Values to save like email and Passwords and Password and update them to firebase*/
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   const { currentUser, updatePassword, updateEmail } = useAuth();
+
+  /* Values for error, messages and for loading*/
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  /* Used for Navigation between pages */
   const navigate = useNavigate();
 
+  /* handling the submit function to updating email or password */
   function handleSubmit(e) {
     e.preventDefault();
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -42,6 +48,7 @@ function UpdateProfile() {
       });
   }
 
+  /* The UI of the application */
   return (
     <CenteredContainer>
       <Card>

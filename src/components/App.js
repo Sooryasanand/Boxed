@@ -11,10 +11,11 @@ import Dashboard from "./Boxed/Dashboard";
 
 function App() {
   return (
+    /* Navigation of the application */
     <Router>
       <AuthProvider>
         <Routes>
-          {/* Boxer */}
+          /* Navigation for the inside of the application */
           <Route
             path="/"
             element={
@@ -31,8 +32,7 @@ function App() {
               </PrivateRoute>
             }
           ></Route>
-
-          {/* Profile */}
+          /* Profile */
           <Route
             path="/user"
             element={
@@ -49,8 +49,7 @@ function App() {
               </PrivateRoute>
             }
           ></Route>
-
-          {/* Auth */}
+          /* Navigation for the Auth */
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

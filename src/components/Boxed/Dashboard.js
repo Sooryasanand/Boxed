@@ -10,9 +10,11 @@ import File from "./File";
 import FolderBreadcrumbs from "./FolderBreadcrumbs";
 
 export default function Dashboard() {
+  /* Values saved to be used in the app like the folderId and others */
   const { folderId } = useParams();
   const { folder, childFolders, childFiles } = useFolder(folderId);
 
+  /* Rendering folders and files of the application */
   return (
     <>
       <Navbar />

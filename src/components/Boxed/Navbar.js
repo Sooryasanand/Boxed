@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPerson } from "@fortawesome/free-solid-svg-icons";
 
+/* Rendering the Navbar of the App */
 export default function NavComponent() {
   return (
     <Navbar

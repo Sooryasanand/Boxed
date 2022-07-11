@@ -7,18 +7,22 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AddFolderButton({ currentFolder }) {
+  /* Values of the logged in user and others */
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const { currentUser } = useAuth();
 
+  /* Opening the menu of Folders when clicked on the button */
   function openModal() {
     setOpen(true);
   }
 
+  /* Closing the menu of Folders when clicked on the button */
   function closeModal() {
     setOpen(false);
   }
 
+  /* Handling the creation of Folders and uploading to Firebase Database */
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -40,6 +44,7 @@ export default function AddFolderButton({ currentFolder }) {
     closeModal();
   }
 
+  /* Rendering the menu of Folders */
   return (
     <>
       <Button

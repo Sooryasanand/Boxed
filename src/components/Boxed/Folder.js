@@ -8,8 +8,10 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 import firebase from "firebase/compat/app";
 
 export default function Folder({ folder }) {
+  /* Values of the database and storage*/
   const docRef = firebase.firestore().collection("folders");
 
+  /* Handling the delete function of the folders */
   const handleDelete = () => {
     try {
       console.log(`${folder.id}`);
@@ -40,6 +42,7 @@ export default function Folder({ folder }) {
     });
   };
 
+  /* Rendering a single folder which can be opened */
   return (
     <Button
       to={{

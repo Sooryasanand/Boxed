@@ -3,10 +3,12 @@ import { auth } from "../firebase";
 
 const AuthContext = React.createContext();
 
+/* exporting to be used in other pages of the app */
 export function useAuth() {
   return useContext(AuthContext);
 }
 
+/* used for creating function's such as signup and login */
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
@@ -54,6 +56,7 @@ export function AuthProvider({ children }) {
     updatePassword,
   };
 
+  /* Returns the provider */
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

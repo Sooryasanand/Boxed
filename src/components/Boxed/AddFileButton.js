@@ -15,10 +15,12 @@ import { faFileUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function AddFileButton({ currentFolder }) {
+  /* Values for uploading the Files and getting the logged in user */
   const [uploadingFiles, setUploadingFiles] = useState([]);
   const { currentUser } = useAuth();
   const storage = getStorage();
 
+  /* Handling the uploading of Files to Firebase and creating the Database of the files*/
   function handleUpload(e) {
     const file = e.target.files[0];
     if (currentFolder == null || file == null) return;
@@ -94,6 +96,7 @@ export default function AddFileButton({ currentFolder }) {
     );
   }
 
+  /* Rendering the folder UI */
   return (
     <>
       <label className="btn btn-outline-success btn-sm m-0">

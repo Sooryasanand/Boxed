@@ -40,6 +40,7 @@ function reducer(state, { type, payload }) {
   }
 }
 
+/* Function to upload the files and folders to the database */
 export function useFolder(folderId = null, folder = null) {
   const [state, dispatch] = useReducer(reducer, {
     folderId,
