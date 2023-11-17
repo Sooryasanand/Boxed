@@ -1,9 +1,6 @@
 # Boxed
 Boxed is an cloud storage app which is build using various Api's and apps. The files and folders of the user, the images in the website and other information is stored in Google Firebase. Google Firebase hosting was used to host the website in the internet. Google Firebase was used for authentication, storage and database to keep track of the user's info and their files and folders.
 
-## How to run it?
-This website can be viewed from [here](https://boxer-development.web.app/)
-
 ## Key features of the website
 - Authentication of user and only allowing to access logedin user's files and folders. 
 - Not allowing other users to browse other users files and folders without auth.
